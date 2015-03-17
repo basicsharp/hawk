@@ -69,13 +69,16 @@ final class AesCbcWithIntegrity {
     private static final String RANDOM_ALGORITHM = "SHA1PRNG";
     private static final int AES_KEY_LENGTH_BITS = 128;
     private static final int IV_LENGTH_BYTES = 16;
-    private static final int PBE_ITERATION_COUNT = 10000;
+//    private static final int PBE_ITERATION_COUNT = 10000;
+    private static final int PBE_ITERATION_COUNT = 2048;
     private static final int PBE_SALT_LENGTH_BITS = AES_KEY_LENGTH_BITS; // same size as key output
     private static final String PBE_ALGORITHM = "PBKDF2WithHmacSHA1";
     private static final int BASE64_FLAGS = Base64.NO_WRAP;
     private static final AtomicBoolean prngFixed = new AtomicBoolean(false);
-    private static final String HMAC_ALGORITHM = "HmacSHA256";
-    private static final int HMAC_KEY_LENGTH_BITS = 256;
+//    private static final String HMAC_ALGORITHM = "HmacSHA256";
+//    private static final int HMAC_KEY_LENGTH_BITS = 256;
+    private static final String HMAC_ALGORITHM = "HmacSHA1";
+    private static final int HMAC_KEY_LENGTH_BITS = 160;
 
     /**
      * Converts the given AES/HMAC keys into a base64 encoded string suitable for
